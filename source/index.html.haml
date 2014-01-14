@@ -1,5 +1,5 @@
 ---
-title: phonegap template
+title: static template
 body_class: index
 ---
 
@@ -7,13 +7,10 @@ body_class: index
 
 - demo_files = Dir['source/images/demo/*']
 - demo_files.map { |f| f.split('/') }
-
-- demo_files.each do |l|
-  - filename = l.gsub('source/images/demo','').gsub('/','')
-  -# .gsub(/\.(png|jpg)/,'')
-  - link = filename.gsub(/\.(png|jpg|pdf)/,'')
-  - link_pic = l.gsub('source/','')
-  %h3.text-center
-    = link_to "#{filename}", "#{link}"
-  %hr
+.btn-group.btn-group-vertical.btn-block
+  - demo_files.each do |l|
+    - filename = l.gsub('source/images/demo','').gsub('/','')
+    - link = filename.gsub(/\.(png|jpg|pdf)/,'')
+    - link_pic = l.gsub('source/','')
+    = link_to "#{filename}", "#{link}", class: 'btn btn-lg btn-block btn-link'
 
