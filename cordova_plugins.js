@@ -1,1 +1,1 @@
-cordova.define("cordova/plugin_list",function(e,n,t){t.exports=[]});
+cordova.define("cordova/plugin_list",function(e,t,n){n.exports=[]});
