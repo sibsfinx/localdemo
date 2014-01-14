@@ -27,22 +27,6 @@ end
 ##############################
 # Initalise
 
-# Assumes the file source/about/template.html.erb exists
-#demo_files = Dir['source/images/demo/*']
-#demo_files.map { |f| f.split('/') }
-  #["tom", "dick", "harry"].each do |name|
-#demo_files.each do |name|
-#  proxy "/#{name}.html", "/demo.html", :locals => { :name => name }
-#end
-
-demo_files = Dir['source/images/demo/*']
-demo_files.map { |f| f.split('/') }
-
-demo_files.each do |l|
-  link = l.gsub('source/images/demo','').gsub(/\.(png|jpg)/,'').gsub('/','')
-  proxy "/#{link}", "/demo.html", :locals => { :src => link }
-end
-
 
 
 
@@ -71,6 +55,13 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-XXXXXXX-X'
 end
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+end
+
+
+
 ##############################
 # Pages
 page "*", :layout => "application"
@@ -79,6 +70,14 @@ page "*", :layout => "application"
 ##############################
 # Dynamically Generated Pages
 activate :directory_indexes  #Removes .html from file
+
+demo_files = Dir['source/images/demo/*']
+demo_files.map { |f| f.split('/') }
+
+demo_files.each do |l|
+  link = l.gsub('source/images/demo','').gsub(/\.(png|jpg)/,'').gsub('/','')
+  proxy "/#{link}", "/demo.html", :locals => { :src => link }
+end
 
 
 
