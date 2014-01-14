@@ -12,5 +12,5 @@ body_class: index
     - filename = l.gsub('source/images/demo','').gsub('/','')
     - link = filename.gsub(/\.(png|jpg|pdf)/,'')
     - link_pic = l.gsub('source/','')
-    = link_to "#{filename}", "#{link}", class: 'btn btn-lg btn-block btn-link'
+    = link_to "#{filename}", "/#{link}.html", class: 'btn btn-lg btn-block btn-link'
 

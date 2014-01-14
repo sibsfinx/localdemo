@@ -69,14 +69,14 @@ page "*", :layout => "application"
 
 ##############################
 # Dynamically Generated Pages
-activate :directory_indexes  #Removes .html from file
+#activate :directory_indexes  #Removes .html from file
 
 demo_files = Dir['source/images/demo/*']
 demo_files.map { |f| f.split('/') }
 
 demo_files.each do |l|
   link = l.gsub('source/images/demo','').gsub(/\.(png|jpg)/,'').gsub('/','')
-  proxy "/#{link}", "/demo.html", :locals => { :src => link }
+  proxy "/#{link}.html", "/demo.html", :locals => { :src => link }
 end
 
 
