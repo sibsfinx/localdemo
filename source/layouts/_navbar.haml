@@ -1,0 +1,14 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .pull-left
+      -#= link_to root_app_path do
+      = link_to 'http://brandymint.com/' do
+        %img{ src: "#{root_app_path}images/logo.svg", alt: :logo, class: 'navbar-brand-logo'}
+
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.pull-right
+        -# TODO add active link state
+        %li
+          = link_to 'link', '#'
+    .clearfix
+

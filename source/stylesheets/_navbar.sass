@@ -1,0 +1,47 @@
+.navbar.application-navbar
+  @extend .navbar-inverse
+  background: rgba(0,0,0,0.8)
+  //background: none
+  border-bottom: 0
+  +transition(opacity 0.2s ease, height 0.2s ease)
+  opacity: 1
+  height: auto
+  overflow: auto
+  &.transparent
+    opacity: 0
+    height: 0
+    overflow: hidden
+
+  .navbar-toggle
+    border: 0
+
+  .nav.navbar-nav
+    & > li
+      & > a
+        color: $grayLightest
+        font-weight: 700
+        -webkit-font-smoothing: antialiased
+        +transition(color 0.2s ease, background 0.2s ease)
+        background: none
+        &:hover
+          color: $brandColor
+          background: rgba(0,0,0,0.3)
+    @media screen and (max-width: $screen-xs)
+      margin: 0
+      width: 100%
+      & > li
+        & > a
+          margin: 10px auto
+          padding: 10px
+          display: block
+          text-align: center
+
+  .navbar-collapse.in
+    //background: rgba(0,0,0,0.3)
+
+.navbar-brand-logo
+  max-width: 120px
+  margin-top: 12px
+
+
+

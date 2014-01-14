@@ -1,0 +1,99 @@
+%script{:role => "regions-template", :type => "text/template"}
+  <div role="country"></div>
+%script{:role => "dynamics-template", :type => "text/template"}
+  <div role="graph"></div>
+%script{:role => "menu-template", :type => "text/template"}
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <% if(back){ %>
+  <button type="button" class="btn btn-default back-button" role="back">Назад</button>
+  <% } %>
+  <div class="btn-group" data-toggle="buttons" role="switches">
+  <% _(menu).each(function(v, k){  %>
+  <label class="btn btn-primary">
+  <input type="radio" name="menu" value="<%= k %>" id=""> <%= v %>
+  </label>
+  <% }); %>
+  </div>
+  <% if(search){ %>
+  <button type="button" class="btn btn-default search-button">Поиск</button>
+  <% } %>
+  </nav>
+%script{:role => "item-template", :type => "text/template"}
+  / Item
+  <div class="container">
+  <div class="row">
+  <div class="col-xs-4">
+  <div class="thumbnail item-image">
+  <img src="<%= image %>" alt="...">
+  </div>
+  </div>
+  <div class="col-xs-8">
+  <p class="text-muted"><%= date %></p>
+  <h3><%= title %></h3>
+  <p>
+  <b class="user-badge"><span class="glyphicon glyphicon-user text-muted"></span> Dorian Gray</b>
+  <b class="user-badge"><span class="glyphicon glyphicon-user text-muted"></span> Sherlock Homes</b>
+  <b class="user-badge"><span class="glyphicon glyphicon-user text-muted"></span> Vladimir Terekhov</b>
+  <b class="user-badge"><span class="glyphicon glyphicon-user text-muted"></span> Dr. Brain</b>
+  </p>
+  </div>
+  </div>
+  <hr>
+  <div class="row">
+  <div class="col-xs-2 text-center">
+  <h4><span class="glyphicon glyphicon-camera text-muted"></span> <%= views %></h4>
+  </div>
+  <div class="col-xs-2 text-left">
+  <small class="text-muted"><span class="glyphicon glyphicon-time"></span> <%= duration %></small><br>
+  <small class="text-muted"><span class="glyphicon glyphicon-paperclip"></span> <%= sources %></small>
+  </div>
+  <div class="col-xs-4">
+  <div class="row">
+  <div class="col-xs-6">
+  <p><span class="glyphicon glyphicon-user text-muted"></span> <%= users %></p>
+  </div>
+  <div class="col-xs-6 text-right">
+  <p><%= uploads %> <span class="glyphicon glyphicon-upload text-right"></span></p>
+  </div>
+  </div>
+  <div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percent %>%">
+  <span class="sr-only"><%= percent %>%</span>
+  </div>
+  </div>
+  </div>
+  <div class="col-xs-4">
+  <span class="label label-default">Истории</span>
+  <span class="label label-default">Суши</span>
+  <span class="label label-default">Глаз</span>
+  <span class="label label-default">Шаурма</span>
+  <span class="label label-default">Японцы</span>
+  </div>
+  </div>
+  <hr>
+  <div class="row">
+  <div class="col-xs-4">
+  <h4 class="text-muted">Социальные сервисы</h4>
+  <div class="news-block">
+  / News Item
+  <div class="news-item">
+  <h5><span class="glyphicon glyphicon-user"></span> @zarkzork / <span class="text-muted">Vladimir Terekhov</span></h5>
+  <p>
+  Ну нихуя себе, где суши блять. Не хочу есть японскую шаурму.
+  </p>
+  <div class="row">
+  <div class="col-xs-6"><small class="text-muted"><span class="glyphicon glyphicon-time"></span> 15.09.2013 / 13:00</small></div>
+  <div class="col-xs-6 text-right">
+  <small class="text-muted"><span class="glyphicon glyphicon-new-window"></span> 12 <span class="glyphicon glyphicon-heart"></span> 88</small>
+  </div>
+  </div>
+  </div>
+  / /Item
+%script{:src => "assets/jquery/jquery.min.js"}
+%script{:src => "assets/bootstrap/dist/js/bootstrap.min.js"}
+%script{:src => "assets/underscore/underscore-min.js"}
+%script{:src => "assets/backbone/backbone-min.js"}
+%script{:src => "assets/hammerjs/dist/jquery.hammer.min.js"}
+%script{:src => "assets/d3/d3.min.js"}
+%script{:src => "assets/topojson/topojson.js"}
+%script{:src => "app.js"}

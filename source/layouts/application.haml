@@ -1,0 +1,8 @@
+!!! 5
+%html{lang: 'en', class: 'no-js'}
+  %head
+    = partial 'layouts/head'
+  %body{class: current_page.data.body_class || 'page'}
+    = yield
+= partial 'layouts/javascripts'
+

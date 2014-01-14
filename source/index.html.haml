@@ -1,0 +1,19 @@
+---
+title: phonegap template
+body_class: index
+---
+
+-#%img{ src: 'images/demo.png', width: '100%'}
+
+- demo_files = Dir['source/images/demo/*']
+- demo_files.map { |f| f.split('/') }
+
+- demo_files.each do |l|
+  - filename = l.gsub('source/images/demo','')
+  -# .gsub(/\.(png|jpg)/,'')
+  - link = filename.gsub(/\.(png|jpg|pdf)/,'').gsub('/','')
+  - link_pic = l.gsub('source/','')
+  %h1.text-center
+    = link_to "#{filename}", "#{link}"
+  %br
+

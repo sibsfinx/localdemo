@@ -1,0 +1,46 @@
+*.mode1v3
+*.perspectivev3
+*.pbxuser
+.DS_Store
+*.swp
+www/phonegap.js
+_site
+.DS_Store
+.sass-cache
+source/vendor/components
+platforms/android/CordovaLib/bin/
+platforms/android/CordovaLib/gen/
+platforms/android/gen/R.java.d
+platforms/android/bin
+platforms/android/assets/
+platforms/android/local.properties
+platforms/ios/www/
+platforms/ios/RocketWash.xcodeproj/project.xcworkspace/
+/www/
+
+# OS X
+.DS_Store
+
+# Xcode
+DeliveredData/
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.xccheckout
+
+# CocoaPods
+Pods
+
+console.log
+node_modules/
