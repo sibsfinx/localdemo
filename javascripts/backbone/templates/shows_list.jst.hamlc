@@ -1,0 +1,9 @@
+(function() { this.JST || (this.JST = {}); this.JST["backbone/templates/shows_list"] = (function(context) {
+    return (function() {
+      var $o;
+      $o = [];
+      $o.push("<h3>\n  Show\n</h3>");
+      return $o.join("\n");
+    }).call(window.HAML.context(context));
+  });;
+}).call(this);
