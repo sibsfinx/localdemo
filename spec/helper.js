@@ -16,4 +16,4 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-afterEach(function(){document.getElementById("stage").innerHTML=""});var helper={trigger:function(e,t){var s=document.createEvent("Event");s.initEvent(t,!0,!0),e.dispatchEvent(s)},getComputedStyle:function(e,t){var s=document.querySelector(e);return window.getComputedStyle(s).getPropertyValue(t)}};
+afterEach(function(){document.getElementById("stage").innerHTML=""});var helper={trigger:function(e,t){var n=document.createEvent("Event");n.initEvent(t,!0,!0),e.dispatchEvent(n)},getComputedStyle:function(e,t){var n=document.querySelector(e);return window.getComputedStyle(n).getPropertyValue(t)}};

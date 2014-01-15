@@ -20,18 +20,6 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://www.brandymint.com/demo1.html</loc>
-        <lastmod>2014-01-15T00:00:00+04:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://www.brandymint.com/demo2.html</loc>
-        <lastmod>2014-01-15T00:00:00+04:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
         <loc>http://www.brandymint.com/error.html</loc>
         <lastmod>2014-01-15T00:00:00+04:00</lastmod>
         <changefreq>monthly</changefreq>
@@ -112,4 +100,4 @@
     </urlset>
   </body>
 </html>
-<script src="/javascripts/application.js?1389769282" type="text/javascript"></script>
+<script src="/javascripts/application.js?1389771117" type="text/javascript"></script>
