@@ -98,6 +98,8 @@ activate :sprockets
 
 set :build_dir, 'www'
 
+set :relative_links, true
+
 # Development-specific configuration
 configure :development do
   activate :google_analytics do |ga|
