@@ -1,2 +1,8 @@
-.application-window{ style: "background-image: url(\"images/demo/#{locals[:src]}.png\")"}
+- if locals[:skip_this]
+  .col-xs-12
+    .page-header
+      %a.btn.btn-lg.btn-block.btn-default{href: "#{locals[:next_link]}" }
+        skip this
+- else
+  %a.application-window.clickable{ style: "background-image: url(\"images/demo/#{locals[:src]}.png\")", role: 'design-demo-image', href: "#{locals[:next_link]}"}
 

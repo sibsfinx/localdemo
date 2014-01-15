@@ -9,7 +9,14 @@ body_class: index
 - demo_files.map { |f| f.split('/') }
 .btn-group.btn-group-vertical.btn-block
   - demo_files.each do |l|
-    - filename = l.gsub('source/images/demo','').gsub('/','')
-    - link = filename.gsub(/\.(png|jpg|pdf)/,'')
-    = link_to "#{filename}", "#{link}.html", class: 'btn btn-lg btn-block btn-link'
+    - if l.match(/(png|jpg)/)
+      - filename = l.gsub('source/images/demo','').gsub('/','')
+      - link = filename.gsub(/\.(png|jpg|pdf)/,'')
+      = link_to "#{filename}", "#{link}.html", class: 'btn btn-lg btn-block btn-link'
+%hr
+.btn-group.btn-group-vertical.btn-block
+  - demo_files.each do |l|
+    - if l.match(/\./) && !l.match(/(png|jpg)/)
+      - filename = l.gsub('source/images/demo','').gsub('/','')
+      = link_to "#{filename}", "#{filename}", class: 'btn btn-lg btn-block btn-link'
 
